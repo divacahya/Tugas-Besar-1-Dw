@@ -1,0 +1,453 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body {
+    min-height: 50vh;
+    background: rgba(253, 244, 248, 0.519);
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 211, 226, 0.759);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: hotpink;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header .navbar ul li {
+    position: relative;
+}
+
+header .navbar ul li a {
+    font-size: 18px;
+    padding: 8px 12px;
+    color: hotpink;
+    display: block;
+    transition: color 0.3s;
+}
+
+header .navbar ul li a:hover {
+    background: rgb(255, 159, 228);
+    color: #fff;
+}
+
+header .navbar ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff80;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    min-width: 200px;
+}
+
+header .navbar ul li ul li {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header .navbar ul li:hover > ul {
+    display: block;
+}
+
+/* Mobile Menu Checkbox */
+#menu-bar:checked ~ .navbar {
+    display: block;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 25px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive Design */
+
+/* Desktop (>=1200px) */
+@media (min-width: 1200px) {
+    header .navbar ul {
+        gap: 25px;
+    }
+
+    header .navbar ul li a {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+}
+
+/* Tablet (768px - 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    header label {
+        display: none;
+    }
+
+    header .navbar ul {
+        gap: 15px;
+    }
+
+    header .navbar ul li a {
+        font-size: 18px;
+        padding: 8px 10px;
+    }
+}
+
+/* Smartphone Besar (576px - 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+    header label {
+        display: block;
+    }
+
+    header .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header .navbar ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    header .navbar ul li a {
+        font-size: 16px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: static;
+        width: 100%;
+        background: #eee;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #menu-bar:checked ~ .navbar {
+        display: flex;
+    }
+}
+
+/* Smartphone Kecil (<576px) */
+@media (max-width: 575px) {
+    header {
+        padding: 10px;
+    }
+
+    header .logo {
+        font-size: 20px;
+    }
+
+    header label {
+        display: block;
+        font-size: 20px;
+    }
+
+    header .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header .navbar ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    header .navbar ul li a {
+        font-size: 14px;
+        padding: 8px;
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: static;
+        width: 100%;
+        background: #eee;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #menu-bar:checked ~ .navbar {
+        display: flex;
+    }
+}
+
+/* Untuk FAQ */
+section {
+    min-height: 45vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin: 2rem 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #333;
+}
+
+.faq {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(255, 20, 20);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.question h3 {
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: #333;
+    margin: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 10px;
+}
+
+.answer p {
+    padding-top: 0.5rem;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    margin: 0;
+    color: #555;
+    text-align: left;
+}
+
+.faq.active .answer {
+    max-height: 500px; /
+}
+
+.faq.active svg {
+    transform: rotate(180deg);
+}
+
+svg {
+    transition: transform 0.3s ease-in;
+}
+
+.faq {
+    border-bottom: 1px solid rgb(255, 20, 20);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* Contact Section */
+.footer {
+    background-color: #f8d7e5; 
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    min-width: 200px; 
+}
+
+.footer-section:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ccc;
+}
+
+.footer-section.links ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.footer-section.links ul li a {
+    color: #444;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-section.links ul li a:hover {
+    color: #e05680;
+}
+
+.footer-section.contact-info h7, 
+.footer-section.social-media h8 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    display: block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.footer-section.contact-info p a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-section.contact-info p a:hover {
+    color: #ff5c8d;
+}
+
+.footer-section.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-section.social-media img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s ease;
+    mix-blend-mode: multiply;
+}
+
+.footer-section.social-media img:hover {
+    transform: scale(1.3); 
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #f9f0f4;
+    font-size: 0.9em;
+    color: #777;
+    border-top: 1px solid #ccc;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .footer-section {
+        flex: 1 1 45%; 
+        margin: 10px; 
+    }
+}
+
+@media (max-width: 900px) {
+    .footer-section {
+        flex: 1 1 100%; 
+        padding: 20px; 
+    }
+
+    .footer-bottom {
+        font-size: 0.8em; 
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-section.contact-info h7, 
+    .footer-section.social-media h8 {
+        font-size: 1.2em; 
+    }
+
+    .footer-section.social-media img {
+        width: 40px; 
+        height: 40px; 
+    }
+}

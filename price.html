@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PriceList Beauty Divcay</title>
+        <link rel="stylesheet" href="price.css">
+</head>
+<body> 
+    <header>
+        <img src="logo1.png" width="70px">
+        <a href="#" class="logo" style="color: hotpink;">Beauty Divcay</a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">☰</label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Service List</a></li>
+                <li>
+                    <a href="price.html">Price List</a>
+                    <ul>
+                        <li><a href="hair.html">Hair Treatment</a></li>
+                        <li><a href="nail.html">Nail & Eye Treatment</a></li>
+                        <li><a href="face.html">Face & Body Treatment</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<section id="harga1">
+    <div class="ser">
+            <h2 style="color: hotpink;">PriceList</h2>
+        </div>
+    <div class="harga-list">
+        <div class="price" onclick="togglePriceList('hair')">
+            <a href="hair.html"><img src="hair.jpg" width="400px" height="280px"> Hair Treatment</a>
+            </div>
+        <div class="price" onclick="togglePriceList('nail')">
+            <a href="nail.html"><img src="n&e.jpeg" width="400px"  height="280px"> Nail & Eye Treatment</a>
+            </div>
+        <div class="price" onclick="togglePriceList('skin')">
+            <a href="face.html"><img src="saln.jpg" width="400px"  height="280px">Face & Body Treatment</a>
+            </div>
+</section>
+
+<!--Contact section-->
+<section id="contact">
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Logo and Links Section -->
+            <div class="footer-section links">
+                <img src="logo1.png" alt="Logo beauty divcay" width="110px">
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Information Section -->
+            <div class="footer-section contact-info">
+                <h7>Contact</h7>
+                <p><a href="https://maps.app.goo.gl/1A8tiwkb8FiotBtf8?g_st=com.google.maps.preview.copy">Alamat : JL. Salak Raya No.101, Munjul, Cipayung Jakarta Timur</a></p>
+                <p><a href="mailto:divacahya30@gmail.com">Email : beautydivcay@gmail.com</a></p>
+                <p><a href="https://wa.me/6287897972517"> Whatsapp : 087897972517"</a></p>
+                <p>No.Telp : (021) 878-734-31</p>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-section social-media">
+                <h8>Follow Our Social Media</h8>
+                <a href="https://www.tiktok.com/@dwilliu?_t=8r3kiUZEpsm&_r=1" target="_blank" aria-label="TikTok"><img src="https://i.pinimg.com/736x/a7/bf/b9/a7bfb9f9c685b3914775b6dd87d56d23.jpg" alt="TikTok"></a>
+                <a href="https://youtube.com/@divacahya4015?si=YKShXeHu7gRC9exb" target="_blank" aria-label="YouTube"><img src="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Almost-Black-Logo.wine.svg" alt="YouTube"></a>
+                <a href="https://www.instagram.com/divachyaaa?igsh=MW56czg2ejc3enZ6cg%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram"><img src="https://buatlogoonline.com/wp-content/uploads/2022/09/logo-instagram-hitam-putih.jpg" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer> 
+    </section>   
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Beauty Divcay. All Rights Reserved</p>
+        </div>
+        <script src="script.js"></script>   
+</body>
+</html>
